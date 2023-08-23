@@ -44,11 +44,23 @@ nav li a {
 }
 
 
+.btn-primary {
+    border-radius: 8px;
+    background: #FF900E;
+    padding: 20px 25px;
+    color: #FFF;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+}
+
+
 
 /* banner styles */
 
 .banner-content {
-    width: 800px;
+    max-width: 800px;
     text-align: center;
     margin: 0 auto;
 }
@@ -64,8 +76,31 @@ nav li a {
     color: var(--dark-03, #727272);
 }
 
-.btn-primary {
-    border-radius: 8px;
-    background: #FF900E;
-    padding: 20px 25px;
+.banner img {
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+
+
+/* responsive styles */
+/*mobile devices*/
+
+@media screen and (max-width:576px) {
+    header{
+        padding: 20px;
+    }
+    nav{
+        flex-direction: column;
+    }   
+}
+
+
+/* tablet or medium devices */
+
+@media screen and (min-width:576px) and (max-width:960px) {
+    nav {
+        flex-direction: column;
+    }
 }

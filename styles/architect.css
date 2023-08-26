@@ -1,6 +1,9 @@
 /* work sans fonts from google */
 
 
+/* shared styles */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,800;1,800&family=Work+Sans:wght@400;500;600;700&display=swap');
 
 
@@ -8,6 +11,28 @@
     font-family: 'Open Sans', sans-serif;
     font-family: 'Work Sans', sans-serif;
 }
+
+
+.btn-primary {
+    border-radius: 8px;
+    background: #FF900E;
+    padding: 20px 25px;
+    color: #FFF;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+}
+
+
+.text-gray{
+    color: var(--dark-03, #727272);
+}
+
+
+
+
+
 
 /* header styles */
 
@@ -44,16 +69,7 @@ nav li a {
 }
 
 
-.btn-primary {
-    border-radius: 8px;
-    background: #FF900E;
-    padding: 20px 25px;
-    color: #FFF;
-    font-size: 1.25rem;
-    font-weight: 600;
-    border: 0;
-    cursor: pointer;
-}
+
 
 
 
@@ -72,14 +88,61 @@ nav li a {
 
 }
 
-.banner-description {
-    color: var(--dark-03, #727272);
-}
+
 
 .banner img {
     margin-top: 20px;
     width: 100%;
 }
+
+
+
+
+
+
+/* main styles */
+
+
+main{
+    max-width: 1440px;
+    margin: 70px auto;
+}
+
+
+/* teams styles */
+
+
+.teams-container{
+    display: flex;
+    align-items: center;
+}
+
+.teams-images{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+}
+
+
+.teams-content{
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.teams-title{
+    font-size: 3rem;
+}
+
+.teams-title .quick-list{
+    color: var(--dark-03, #727272);
+    font-weight: 500;
+}
+
+.teams-title .features{
+    color: #FF900E;
+    font-weight: 700;
+}
+
 
 
 
@@ -91,8 +154,17 @@ nav li a {
     header{
         padding: 20px;
     }
-    nav{
+    nav,
+    .teams-container
+    {
         flex-direction: column;
+    }
+    .teams-images{
+        grid-template-columns: 1fr;
+    }
+    .teams-content{
+        padding-left: 20px;
+        padding-right: 20px;
     }   
 }
 
@@ -100,7 +172,10 @@ nav li a {
 /* tablet or medium devices */
 
 @media screen and (min-width:576px) and (max-width:960px) {
-    nav {
+    nav,
+    .teams-container
+    {
         flex-direction: column;
     }
 }
+
